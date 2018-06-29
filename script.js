@@ -7,7 +7,7 @@
 //Wszystko to dzieje się na wykonany submit formularza.
 
 
-let time, distance, hour, minutes, seconds, resultTime;
+let distance, hour, minutes, seconds, resultTime;
 
 distance = document.getElementById('distance-input');
 hour = document.getElementById('hour-input');
@@ -24,12 +24,13 @@ function convertValue() {
     hourValue = hourValue * 60;
     secondsValue = secondsValue / 60;
     distanceValue = distanceValue * 1000;
-    console.log(hourValue);
 }
 
 function calculatePace() {
-    time = hourValue + minutesValue + secondsValue;
-    finalResult = resultTime.innerHTML = (time / convertDistance);
+    convertValue();
+    let time = hourValue + minutesValue + secondsValue;
+    let finalResult = (time / distanceValue);
+    resultTime.innerHTML = finalResult;
     return
 }
 document.getElementById('show-result').addEventListener('submit', calculatePace);
