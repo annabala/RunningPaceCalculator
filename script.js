@@ -5,32 +5,24 @@
 //Obliczanie tempa czyli dzielę podany czas(w minutach) przez dystans w metrach. Otrzymuję oczekiwany wynik.
 //Kolejną rzeczą jest dodanie wyniku do spanu, w którym będzie się pokazywał.
 //Wszystko to dzieje się na wykonany submit formularza.
-
-
-let distance, hour, minutes, seconds, resultTime;
-
-distance = document.getElementById('distance-input');
-hour = document.getElementById('hour-input');
-minutes = document.getElementById('minutes-input');
-seconds = document.getElementById('seconds-input');
-resultTime = document.getElementById('result-time');
-
-let hourValue = hour.value;
-let minutesValue = minutes.value;
-let secondsValue = seconds.value;
-let distanceValue = distance.value;
-
-function convertValue() {
-    hourValue = hourValue * 60;
-    secondsValue = secondsValue / 60;
-    distanceValue = distanceValue * 1000;
-}
+let distance, hour, minutes, seconds;
 
 function calculatePace() {
-    convertValue();
-    let time = hourValue + minutesValue + secondsValue;
-    let finalResult = (time / distanceValue);
+    
+    distance = document.getElementById('distance-input').value;
+    hour = document.getElementById('hour-input').value;
+    minutes = document.getElementById('minutes-input').value;
+    seconds = document.getElementById('seconds-input').value;
+    
+    let hourValue = hour * 60;
+    let secondsValue = seconds / 60;
+    let distanceValue = distance * 1000;
+    let finalResult = 0;
+    let time = 0;
+    let resultTime = 0;
+    
+    time = hourValue + minutes + secondsValue;
+    finalResult = (time / distanceValue);
     resultTime.innerHTML = finalResult;
-    return
 }
 document.getElementById('show-result').addEventListener('submit', calculatePace);
