@@ -21,15 +21,13 @@ let secondsValue = seconds.value;
 let distanceValue = distance.value;
 
 function convertValue() {
-    
-    let convertHour = hourValue * 60;
-    let convertSeconds = secondsValue / 60;
-    let convertDistance = distanceValue * 1000;
-    
+    hourValue = hourValue * 60;
+    secondsValue = secondsValue / 60;
+    distanceValue = distanceValue * 1000;
+    console.log(hourValue);
 }
 
 function calculatePace() {
-    
     time = hourValue + minutesValue + secondsValue;
     finalResult = resultTime.innerHTML = (time / convertDistance);
     return
