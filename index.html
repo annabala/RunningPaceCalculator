@@ -10,10 +10,10 @@
         <link rel="icon" href="img/favicon.png">
     </head>
     <body>
-        <main>
+        <main id='vue-app'>
             <div class="container">
                 <div class="title m-5">
-                    <h1>Calculate your running pace</h1>
+                    <h1>{{ title }}</h1>
                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
                     <path style="fill:#F4A45B;" d="M292.381,363.444h-10.827V267.73h-84.2v95.714h-10.827c-41.621,0-75.362,33.741-75.362,75.362V504.5
@@ -206,6 +206,7 @@
                 </div>
             </div>
         </main>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script src="script.js"></script>
     </body>
 </html>
