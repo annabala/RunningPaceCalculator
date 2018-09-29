@@ -1,4 +1,4 @@
 # RunningPaceCalculator
-Calculator for runners, using vanilla JS
+Calculator for runners, using Vue.js
 
 ## In construction :) 
