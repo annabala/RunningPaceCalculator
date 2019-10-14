@@ -5,15 +5,15 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="ie=edge" http-equiv="x-ua-compatible">
         <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Arimo:400,700&amp;subset=latin-ext" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap&subset=latin-ext" rel="stylesheet">
         <link rel="stylesheet" href="style.css" type="text/css">
         <link rel="icon" href="img/favicon.png">
     </head>
     <body>
         <main id='vue-app'>
             <div class="container">
-                <div class="title m-5">
-                    <h1>{{ greet() }}</h1>
+                <div class="title my-md-5 d-flex flex-column flex-md-row justify-content-between">
+                    <h1 class="h1">{{ greet() }}</h1>
                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
                     <path style="fill:#F4A45B;" d="M292.381,363.444h-10.827V267.73h-84.2v95.714h-10.827c-41.621,0-75.362,33.741-75.362,75.362V504.5
@@ -188,7 +188,7 @@
                 <!-- <h2>My age is: {{ age }}</h2>
                 <button v-on:click="age++">Add a year</button>
                 <button v-on:click="age--">Substract a year</button> -->
-                <form action="" class="form">
+                <form action="#index.html" class="form">
                     <div class="form-group">
                         <label for="distance">Distance</label>
                         <input type="text" id="distance-input" v-bind:value="distance" class="form-control" v-bind:placeholder="distanceUnit" required>
@@ -198,20 +198,21 @@
                     <div class="form-group">
                         <label for="time">Time</label>
                         <div class="row">
-                            <div class="col-4"><input type="text" id="hour-input" class="form-control" placeholder="Hour" required></div>
-                            <div class="col-4"><input type="text" id="minutes-input" class="form-control" placeholder="Minutes" required></div>
-                            <div class="col-4"><input type="text" id="seconds-input" class="form-control" placeholder="Seconds" required></div>
+                            <div class="col-md-4 my-3"><input type="text" id="hour-input" class="form-control" placeholder="Hour" required><span class="error" aria-live="polite"></span></div>
+                            <div class="col-md-4 my-3"><input type="text" id="minutes-input" class="form-control" placeholder="Minutes" required><span class="error" aria-live="polite"></span></div>
+                            <div class="col-md-4 my-3"><input type="text" id="seconds-input" class="form-control" placeholder="Seconds" required><span class="error" aria-live="polite"></span></div>
                         </div>
                     </div>
-                    <button type="submit" id="show-result">Find your pace!</button>
+                    <button v-on:click="calculatePace()" type="submit" id="show-result">Find your pace!</button>
                 </form>
                 <div class="result">
-                    <span class="result-title">Your pace:</span>
-                    <span v-html="result"></span>
+                    <span v-html="result" class="result-div"></span>
                 </div>
             </div>
         </main>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="validation.js"></script>
         <script src="script.js"></script>
+        
     </body>
 </html>
