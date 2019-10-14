@@ -5,3 +5,6 @@ Calculator for runners, using Vue.js
 1. Creating HTML5 template;
 2. Creating Vue app instance.
 in work...
+
+### Live demo
+https://annabala.github.io/RunningPaceCalculator/
