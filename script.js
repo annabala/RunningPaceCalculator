@@ -17,6 +17,31 @@ new Vue({
         substract: function(dec) {
             this.distance -= dec;
             return;
+        },
+        calculatePace: function() {
+            let distance, hour, minutes, seconds, time, result;
+            distance = parseInt(document.getElementById('distance-input').value);
+            hour = parseInt(document.getElementById('hour-input').value);
+            minutes = parseInt(document.getElementById('minutes-input').value);
+            seconds = parseInt(document.getElementById('seconds-input').value);
+            result = document.querySelector('.result-div');
+            
+            let hourValue = hour * 60;
+            let minutesValue = minutes * 1;
+            let secondsValue = seconds / 60;
+            let distanceValue = distance * 1;
+            let finalResult = 0;
+            
+            time = hourValue + minutesValue + secondsValue;
+            
+            finalResult = (time / distanceValue).toFixed(2);
+
+            if(time) {
+                result.innerHTML = `Your result is: ${finalResult} min/km`;
+            } else {
+                alert('Fill empty fields to get a result');
+            }
+            
         }
     }
 
@@ -33,28 +58,26 @@ new Vue({
 
 
 
-// let distance, hour, minutes, seconds, time;
 
-// function calculatePace() {
-    
+// function calculatePace(e) {
+//     e.preventDefault();
+//     let distance, hour, minutes, seconds, time, result;
 //     distance = parseInt(document.getElementById('distance-input').value);
 //     hour = parseInt(document.getElementById('hour-input').value);
 //     minutes = parseInt(document.getElementById('minutes-input').value);
 //     seconds = parseInt(document.getElementById('seconds-input').value);
+//     result = document.querySelector('.result-div');
     
 //     let hourValue = hour * 60;
-//     console.log(hourValue);
 //     let minutesValue = minutes * 1;
 //     let secondsValue = seconds / 60;
 //     let distanceValue = distance * 1;
-//     console.log(distanceValue);
 //     let finalResult = 0;
-//     let resultTime = document.getElementById('result-time');
     
 //     time = hourValue + minutesValue + secondsValue;
-//     console.log(time);
-//     finalResult = (time / distanceValue);
-//     resultTime.innerHTML = finalResult;
+    
+//     finalResult = (time / distanceValue).toFixed(2);
+//     return result.innerHTML = finalResult + ' min/km';
     
 // }
 
