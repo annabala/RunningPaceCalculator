@@ -1,53 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="ie=edge" http-equiv="x-ua-compatible">
-        <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap&subset=latin-ext" rel="stylesheet">
-        <link rel="stylesheet" href="style.css" type="text/css">
-        <link rel="icon" href="img/favicon.png">
-    </head>
-    <body>
-        <main id='vue-app'>
-            <div class="container">
-                <div class="title my-md-5 d-flex flex-column flex-md-row justify-content-between">
-                    <h1 class="h1">{{ greet() }}</h1>
-                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap&subset=latin-ext"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" href="img/favicon.png">
+</head>
+
+<body>
+    <main id='vue-app'>
+        <div class="container">
+            <div class="title my-md-5 d-flex flex-column flex-md-row justify-content-center align-items-center">
+                <h1 class="h1 ml-5">Run the world!</h1>
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001"
+                    style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
                     <path style="fill:#F4A45B;" d="M292.381,363.444h-10.827V267.73h-84.2v95.714h-10.827c-41.621,0-75.362,33.741-75.362,75.362V504.5
-                     h256.578v-65.695C367.743,397.184,334.002,363.444,292.381,363.444z"/>
+                     h256.578v-65.695C367.743,397.184,334.002,363.444,292.381,363.444z" />
                     <path style="fill:#E58945;" d="M292.381,363.444h-22.632c41.621,0,75.362,33.741,75.362,75.362V504.5h22.632v-65.695
-                     C367.743,397.184,334.003,363.444,292.381,363.444z"/>
+                     C367.743,397.184,334.003,363.444,292.381,363.444z" />
                     <path style="fill:#35343F;" d="M409.227,178.434V84.026c0-42.264-34.262-76.526-76.526-76.526l0,0
                      c-42.264,0-76.526,34.262-76.526,76.526v140.976c0,49.164,39.855,89.019,89.019,89.019l0,0c49.164,0,89.019-39.855,89.019-89.019
-                     v-21.583l0,0C420.413,203.419,409.227,192.233,409.227,178.434z"/>
-                    <circle style="fill:#5CDBF1;" cx="318.419" cy="80.67" r="46.1"/>
+                     v-21.583l0,0C420.413,203.419,409.227,192.233,409.227,178.434z" />
+                    <circle style="fill:#5CDBF1;" cx="318.419" cy="80.67" r="46.1" />
                     <path style="fill:#484655;" d="M101.212,167.378v88.635h276.484v-88.635c0-76.349-61.893-138.242-138.242-138.242l0,0
-                     C163.105,29.136,101.212,91.029,101.212,167.378z"/>
+                     C163.105,29.136,101.212,91.029,101.212,167.378z" />
                     <g>
-                     <path style="fill:#FA9E3E;" d="M109.293,220.99h49.369v56.61h-49.369c-15.632,0-28.305-12.673-28.305-28.305
-                      S93.661,220.99,109.293,220.99z"/>
-                     <path style="fill:#FA9E3E;" d="M369.615,220.99h-49.369v56.61h49.369c15.632,0,28.305-12.673,28.305-28.305
-                      S385.247,220.99,369.615,220.99z"/>
+                        <path style="fill:#FA9E3E;" d="M109.293,220.99h49.369v56.61h-49.369c-15.632,0-28.305-12.673-28.305-28.305
+                      S93.661,220.99,109.293,220.99z" />
+                        <path style="fill:#FA9E3E;" d="M369.615,220.99h-49.369v56.61h49.369c15.632,0,28.305-12.673,28.305-28.305
+                      S385.247,220.99,369.615,220.99z" />
                     </g>
                     <path style="fill:#FFB56B;" d="M239.454,342.79L239.454,342.79c-61.919,0-112.115-50.195-112.115-112.115V192.76
                      c0-32.297,26.182-58.479,58.479-58.479h107.271c32.297,0,58.479,26.182,58.479,58.479v37.915
-                     C351.569,292.595,301.373,342.79,239.454,342.79z"/>
-                    <path style="fill:#EF9245;" d="M351.569,230.675V192.76c0-19.105-9.165-36.067-23.334-46.739v96.321
+                     C351.569,292.595,301.373,342.79,239.454,342.79z" />
+                    <path style="fill:#EF9245;"
+                        d="M351.569,230.675V192.76c0-19.105-9.165-36.067-23.334-46.739v96.321
                      c0,53.578-41.949,97.354-94.794,100.286h0.001c0.981,0.052,1.965,0.091,2.951,0.118c0.016,0,0.032,0.001,0.048,0.002
-                     c1.001,0.027,2.005,0.041,3.013,0.041l0,0c5.805,0,11.507-0.441,17.074-1.292C310.344,333.275,351.569,286.79,351.569,230.675z"/>
+                     c1.001,0.027,2.005,0.041,3.013,0.041l0,0c5.805,0,11.507-0.441,17.074-1.292C310.344,333.275,351.569,286.79,351.569,230.675z" />
                     <path style="fill:#F0EEEE;" d="M77.787,144.117v8.945c0,10.757,8.72,19.477,19.477,19.477h284.379
                      c10.757,0,19.477-8.72,19.477-19.477v-8.945c0-10.757-8.72-19.477-19.477-19.477H97.265C86.508,124.64,77.787,133.36,77.787,144.117
-                     z"/>
+                     z" />
                     <g>
-                     <path style="fill:#EF9AD3;" d="M401.121,156.09H77.787c-4.143,0-7.5-3.357-7.5-7.5s3.357-7.5,7.5-7.5h323.334
-                      c4.143,0,7.5,3.357,7.5,7.5C408.621,152.732,405.264,156.09,401.121,156.09z"/>
-                     <path style="fill:#EF9AD3;" d="M343.499,504.5c-13.524-18.342-21.522-41.009-21.522-65.547c0-21.784,6.303-42.094,17.18-59.213
+                        <path style="fill:#EF9AD3;" d="M401.121,156.09H77.787c-4.143,0-7.5-3.357-7.5-7.5s3.357-7.5,7.5-7.5h323.334
+                      c4.143,0,7.5,3.357,7.5,7.5C408.621,152.732,405.264,156.09,401.121,156.09z" />
+                        <path style="fill:#EF9AD3;" d="M343.499,504.5c-13.524-18.342-21.522-41.009-21.522-65.547c0-21.784,6.303-42.094,17.18-59.213
                       c-10.472-8.305-23.196-13.893-37.112-15.679V383.8c0,34.568-28.023,62.591-62.591,62.591l0,0
                       c-34.568,0-62.591-28.023-62.591-62.591v-19.739c-13.916,1.786-26.64,7.374-37.112,15.679c10.877,17.119,17.18,37.429,17.18,59.213
-                      c0,24.538-7.998,47.204-21.522,65.547L343.499,504.5L343.499,504.5z"/>
+                      c0,24.538-7.998,47.204-21.522,65.547L343.499,504.5L343.499,504.5z" />
                     </g>
                     <path style="fill:#D67ABC;" d="M333.137,375.429c-0.072-0.047-0.145-0.093-0.217-0.139c-1.977-1.265-4.018-2.438-6.114-3.518
                      c-0.189-0.097-0.376-0.195-0.566-0.29c-0.657-0.331-1.317-0.656-1.984-0.968c-0.123-0.058-0.249-0.111-0.372-0.168
@@ -56,8 +62,9 @@
                      c-0.488-0.131-0.979-0.254-1.471-0.375c-0.629-0.155-1.262-0.3-1.898-0.438c-0.412-0.09-0.823-0.187-1.238-0.27
                      c-0.981-0.197-1.97-0.371-2.965-0.529c-0.399-0.064-0.801-0.118-1.202-0.176c-0.35-0.05-0.704-0.089-1.056-0.134v6.623
                      c11.627,5.524,21.603,13.943,29.024,24.319c2.308-5.322,5.007-10.435,8.088-15.284C337.225,378.208,335.215,376.77,333.137,375.429z
-                     "/>
-                    <path d="M434.214,195.92c-4.671,0-9.063-1.819-12.366-5.124c-3.305-3.304-5.124-7.695-5.124-12.366v-94.4
+                     " />
+                    <path
+                        d="M434.214,195.92c-4.671,0-9.063-1.819-12.366-5.124c-3.305-3.304-5.124-7.695-5.124-12.366v-94.4
                      c0-46.335-37.691-84.03-84.02-84.03c-22.452,0-43.556,8.739-59.424,24.606c-0.257,0.257-0.512,0.532-0.768,0.796
                      c-10.758-2.497-21.807-3.762-33.059-3.762c-18.378,0-36.291,3.374-53.244,10.031c-16.411,6.452-31.362,15.721-44.438,27.547
                      c-3.071,2.779-3.31,7.522-0.531,10.594c2.779,3.072,7.521,3.31,10.594,0.531c11.729-10.609,25.142-18.924,39.86-24.711
@@ -145,14 +152,15 @@
                      c0.008,0,0.016,0.002,0.025,0.002c0.009,0,0.017-0.002,0.025-0.002h10.667c6.606,0,11.98,5.374,11.98,11.98v8.94H393.624z
                       M381.644,117.14h-5.361c-2.198-5.983-4.787-11.837-7.751-17.483c2.301-6.046,3.483-12.413,3.483-18.987
                      c0-29.555-24.045-53.6-53.601-53.6c-8.208,0-16.281,1.882-23.576,5.463c-1.849-0.761-3.712-1.471-5.583-2.153
-                     C301.509,20.42,316.687,15,332.704,15c38.058,0,69.02,30.967,69.02,69.03v42.093C396.78,120.614,389.611,117.14,381.644,117.14z"/>
+                     C301.509,20.42,316.687,15,332.704,15c38.058,0,69.02,30.967,69.02,69.03v42.093C396.78,120.614,389.611,117.14,381.644,117.14z" />
                     <path d="M293.777,232.962c4.143,0,7.5-3.357,7.5-7.5v-2c0-4.143-3.357-7.5-7.5-7.5s-7.5,3.357-7.5,7.5v2
-                     C286.277,229.605,289.635,232.962,293.777,232.962z"/>
+                     C286.277,229.605,289.635,232.962,293.777,232.962z" />
                     <path d="M185.131,232.962c4.143,0,7.5-3.357,7.5-7.5v-2c0-4.143-3.357-7.5-7.5-7.5s-7.5,3.357-7.5,7.5v2
-                     C177.631,229.605,180.988,232.962,185.131,232.962z"/>
-                    <path d="M239.454,288.484c13.494,0,26.142-6.632,33.833-17.739c2.358-3.405,1.509-8.077-1.897-10.435
+                     C177.631,229.605,180.988,232.962,185.131,232.962z" />
+                    <path
+                        d="M239.454,288.484c13.494,0,26.142-6.632,33.833-17.739c2.358-3.405,1.509-8.077-1.897-10.435
                      c-3.406-2.359-8.078-1.508-10.435,1.896c-4.891,7.063-12.928,11.278-21.501,11.278s-16.61-4.216-21.501-11.278
-                     c-2.357-3.406-7.029-4.256-10.436-1.896c-3.405,2.358-4.255,7.03-1.896,10.435C213.312,281.853,225.96,288.484,239.454,288.484z"/>
+                     c-2.357-3.406-7.029-4.256-10.436-1.896c-3.405,2.358-4.255,7.03-1.896,10.435C213.312,281.853,225.96,288.484,239.454,288.484z" />
                     <g>
                     </g>
                     <g>
@@ -183,36 +191,75 @@
                     </g>
                     <g>
                     </g>
-                    </svg>
-                </div>
-                <!-- <h2>My age is: {{ age }}</h2>
+                </svg>
+            </div>
+            <!-- <h2>My age is: {{ age }}</h2>
                 <button v-on:click="age++">Add a year</button>
                 <button v-on:click="age--">Substract a year</button> -->
-                <form action="#index.html" class="form">
+            <div class="form-container">
+                <form action="#index.html" class="form grid-el">
+                    <h2 class="h2">Here, you can calculate your pace:</h2>
                     <div class="form-group">
                         <label for="distance">Distance</label>
-                        <input type="text" id="distance-input" v-bind:value="distance" class="form-control" v-bind:placeholder="distanceUnit" required>
+                        <input type="text" id="distance-input" v-bind:value="distance" class="form-control"
+                            v-bind:placeholder="distanceUnit" required>
                         <button type="button" v-on:click="add(1)">More</button>
                         <button type="button" v-on:click="substract(1)">Less</button>
                     </div>
                     <div class="form-group">
                         <label for="time">Time</label>
                         <div class="row">
-                            <div class="col-md-4 my-3"><input type="text" id="hour-input" class="form-control" placeholder="Hour" required><span class="error" aria-live="polite"></span></div>
-                            <div class="col-md-4 my-3"><input type="text" id="minutes-input" class="form-control" placeholder="Minutes" required><span class="error" aria-live="polite"></span></div>
-                            <div class="col-md-4 my-3"><input type="text" id="seconds-input" class="form-control" placeholder="Seconds" required><span class="error" aria-live="polite"></span></div>
+                            <div class="col-md-4 my-3"><input type="text" id="hour-input" class="form-control"
+                                    placeholder="Hour" required><span class="error" aria-live="polite"></span></div>
+                            <div class="col-md-4 my-3"><input type="text" id="minutes-input" class="form-control"
+                                    placeholder="Minutes" required><span class="error" aria-live="polite"></span></div>
+                            <div class="col-md-4 my-3"><input type="text" id="seconds-input" class="form-control"
+                                    placeholder="Seconds" required><span class="error" aria-live="polite"></span></div>
                         </div>
                     </div>
                     <button v-on:click="calculatePace()" type="submit" id="show-result">Find your pace!</button>
                 </form>
-                <div class="result">
+                <div class="result grid-el">
+                    <h2 class="h2">Your pace:</h2>
                     <span v-html="result" class="result-div"></span>
                 </div>
+                <form action="#index.html" class="form grid-el">
+                    <h2 class="h2">Save your best results:</h2>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-12 my-3">
+                                <label for="race-name">Race name</label>
+                                <input type="text" id="race-name" class="form-control" placeholder="New York Marathon"
+                                    required>
+                            </div>
+                            <div class="col-12 my-3">
+                                <label for="race-distance">Race distance</label>
+                                <input type="text" id="race-distance" class="form-control" placeholder="42,125km"
+                                    required>
+                            </div>
+                            <div class="col-12 my-3">
+                                <label for="race-score">Race score</label>
+                                <input type="text" id="race-score" class="form-control" placeholder="3:00:00" required>
+                            </div>
+                        </div>
+                    </div>
+                    <button v-on:click="calculatePace()" type="submit" id="show-result">Add</button>
+                </form>
+                <ul id="score-list" class="grid-el">
+                    <li class="score-list-item">
+                        <span id="score-list-item-name">Maraton w Berlinie</span>
+                        <span id="score-list-item-distance">42,125km</span>
+                        <span id="score-list-item-score">3:40:00</span>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </li>
+                </ul>
             </div>
-        </main>
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <script src="validation.js"></script>
-        <script src="script.js"></script>
-        
-    </body>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
 </html>
