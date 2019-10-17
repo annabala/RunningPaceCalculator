@@ -2,14 +2,10 @@ new Vue({
     el: '#vue-app',
     data: {
         distance: 10,
-        title: 'calculate your running pace',
         distanceUnit: 'kilometers',
         result: '<span class="result-time" id="result-time"></span>',
     },
     methods: {
-        greet: function() {
-            return 'Hello, here you can ' + this.title;
-        },
         add: function(inc) {
             this.distance += inc;
             return;
