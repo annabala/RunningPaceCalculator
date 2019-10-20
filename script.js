@@ -4,6 +4,8 @@ new Vue({
         distance: 10,
         distanceUnit: 'kilometers',
         result: '<span class="result-time" id="result-time"></span>',
+        newItem: "",
+        itemValues: []
     },
     methods: {
         add: function(inc) {
@@ -38,6 +40,19 @@ new Vue({
                 alert('Fill empty fields to get a result');
             }
             
+        },
+        addItem: function() {
+            let elVal, stringValues;
+            let listItem = document.querySelector('.score-list-item');
+            let singleItemValues = document.querySelectorAll('.item-value');
+            let valueArray = Array.prototype.slice.call(singleItemValues);
+            let getValues = valueArray.map((el) => {
+                return elVal = el.value;
+            });
+            if(elVal) {
+                stringValues = getValues.join(', ');
+                listItem.innerHTML = stringValues;
+            }
         }
     }
 
