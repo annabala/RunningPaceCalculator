@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Quicksand:400,500,600,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" href="img/favicon.png">
+</head>
+
+<body>
+    <main id='vue-app'>
+        <nav id="nav" class="text-center">
+            <div class="container">
+                <div class="nav-container d-flex justify-content-between align-items-center">
+                    <div id="logo" class="d-flex flex-row justify-content-center align-items-center">
+                        <img src="img/trainers.svg" alt="">
+                        <h1 class="h1 ml-5">Run the world!</h1>
+                    </div>
+                    <ul id="menu" class="d-flex justify-content-center align-items-center">
+                        <li><a href=""><router-link to="/Calculate pace">Calculate pace</router-link></a></li>
+                        <li><a href=""><router-link to="/Best score">Best score</router-link></a></li>
+                        <li><a href=""><router-link to="/Personal race gallery">Personal race gallery</router-link></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+        <div class="container">
+            <div class="form-container">
+                <form action="#index.html" class="form grid-el">
+                    <h2 class="h2">Here, you can calculate your pace:</h2>
+                    <div class="form-group">
+                        <label for="distance">Distance</label>
+                        <input type="text" id="distance-input" v-bind:value="distance" class="form-control"
+                            v-bind:placeholder="distanceUnit" required>
+                        <button type="button" v-on:click="add(1)">More</button>
+                        <button type="button" v-on:click="substract(1)">Less</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time</label>
+                        <div class="row">
+                            <div class="col-md-4 my-3"><input type="text" id="hour-input" class="form-control"
+                                    placeholder="Hour" required><span class="error" aria-live="polite"></span></div>
+                            <div class="col-md-4 my-3"><input type="text" id="minutes-input" class="form-control"
+                                    placeholder="Minutes" required><span class="error" aria-live="polite"></span></div>
+                            <div class="col-md-4 my-3"><input type="text" id="seconds-input" class="form-control"
+                                    placeholder="Seconds" required><span class="error" aria-live="polite"></span></div>
+                        </div>
+                    </div>
+                    <button v-on:click="calculatePace()" type="submit" id="show-result">Find your pace!</button>
+                </form>
+                <div class="result grid-el">
+                    <h2 class="h2">Your pace:</h2>
+                    <span v-html="result" class="result-div"></span>
+                </div>
+                <form class="form grid-el">
+                    <h2 class="h2">Save your best results:</h2>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-12 my-3">
+                                <label for="race-name">Race name</label>
+                                <input type="text" id="race-name" class="form-control item-value"
+                                    placeholder="New York Marathon" required>
+                            </div>
+                            <div class="col-12 my-3">
+                                <label for="race-distance">Race distance</label>
+                                <input type="text" id="race-distance" class="form-control item-value"
+                                    placeholder="42,125km" required>
+                            </div>
+                            <div class="col-12 my-3">
+                                <label for="race-score">Race score</label>
+                                <input type="text" id="race-score" class="form-control item-value" placeholder="3:00:00"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                    <button @click="addItem" type="button">Add</button>
+                </form>
+                <ul id="score-list" class="grid-el">
+                    <li class="score-list-item"></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
