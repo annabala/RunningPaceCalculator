@@ -4,12 +4,14 @@
       <div class="container">
           <div class="nav-container d-flex justify-content-between align-items-center">
               <div id="logo" class="d-flex flex-row justify-content-center align-items-center">
-                <img id="logo" src="/trainers.svg" alt="">
-                <h1 class="h1 ml-5">Run the world!</h1>
+                <img id="logo" alt="Vue logo" src="./assets/trainers.svg">
+                <h1 class="h1 ml-5"><router-link to="/">Run the world!</router-link></h1>
               </div>
               <ul id="menu" class="d-flex justify-content-center align-items-center">
+              <li><router-link to="/">Home</router-link></li>
                 <li><router-link to="/best-results">Best score</router-link></li>
                 <li><router-link to="/personal-race-gallery">Personal race gallery</router-link></li>
+                <li><router-link to="/registration">Register/Login</router-link></li>
               </ul>
           </div>
         </div>
@@ -17,6 +19,13 @@
     <router-view/>
   </div>
 </template>
+
+<script>
+
+export default {
+  name: 'App'
+}
+</script>
 
 <style lang="scss">
 body {
@@ -63,33 +72,23 @@ body {
     padding: 30px 0;
 }
 
-#vue-app .form-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-}
 
-#vue-app .grid-el {
-    padding: 20px;
-}
 
-#vue-app .grid-el:nth-child(1) {
-    grid-area: 1 / 1 / 2 / 2;
-}
+// #vue-app .grid-el:nth-child(1) {
+//     grid-area: 1 / 1 / 2 / 2;
+// }
 
-#vue-app .grid-el:nth-child(2) {
-    grid-area: 1 / 2 / 2 / 3;
-}
+// // #vue-app .grid-el:nth-child(2) {
+// //     grid-area: 1 / 2 / 2 / 3;
+// // }
 
-#vue-app .grid-el:nth-child(3) {
-    grid-area: 2 / 1 / 3 / 2;
-}
+// // #vue-app .grid-el:nth-child(3) {
+// //     grid-area: 2 / 1 / 3 / 2;
+// // }
 
-#vue-app .grid-el:nth-child(4) {
-    grid-area: 2 / 2 / 3 / 3;
-}
+// #vue-app .grid-el:nth-child(2) {
+//     grid-area: 2 / 2 / 3 / 3;
+// }
 
 #vue-app .form {
     max-width: 500px;

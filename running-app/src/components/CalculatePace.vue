@@ -1,6 +1,6 @@
 <template>
   <div class="calculate-pace">
-    <form action="" class="form grid-el">
+    <form action="" class="form">
         <h2 class="h2">Here, you can calculate your pace:</h2>
         <div class="form-group">
             <label for="distance">Distance</label>
@@ -18,7 +18,7 @@
         </div>
         <button type="submit" id="show-result">Find your pace!</button>
     </form>
-    <div class="result grid-el">
+    <div class="calculate-pace--result">
         <h2 class="h2">Your pace:</h2>
         <span class="result-div"></span>
     </div>
@@ -33,5 +33,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-
+.calculate-pace {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &--result {
+    padding: 20px;
+  }
+}
 </style>
