@@ -9,7 +9,7 @@
               </div>
               <ul id="menu" class="d-flex justify-content-center align-items-center">
               <li><router-link to="/">Home</router-link></li>
-                <li><router-link to="/best-results">Best score</router-link></li>
+                <li><router-link to="/app-results">Best score</router-link></li>
                 <li><router-link to="/personal-race-gallery">Personal race gallery</router-link></li>
                 <li><router-link to="/registration">Register/Login</router-link></li>
               </ul>
@@ -71,24 +71,6 @@ body {
 #vue-app {
     padding: 30px 0;
 }
-
-
-
-// #vue-app .grid-el:nth-child(1) {
-//     grid-area: 1 / 1 / 2 / 2;
-// }
-
-// // #vue-app .grid-el:nth-child(2) {
-// //     grid-area: 1 / 2 / 2 / 3;
-// // }
-
-// // #vue-app .grid-el:nth-child(3) {
-// //     grid-area: 2 / 1 / 3 / 2;
-// // }
-
-// #vue-app .grid-el:nth-child(2) {
-//     grid-area: 2 / 2 / 3 / 3;
-// }
 
 #vue-app .form {
     max-width: 500px;

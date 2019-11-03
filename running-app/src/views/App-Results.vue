@@ -1,18 +1,18 @@
 <template>
   <div class="best-results-page">
-    <BestResults/>
+    <AppResults/>
   </div>
 
 </template>
 
 <script>
 // @ is an alias to /src
-import BestResults from '@/components/BestResults.vue'
+import AppResults from '@/components/AppResults.vue'
 
 export default {
-  name: 'best-results',
+  name: 'app-results',
   components: {
-    BestResults
+    AppResults
   }
 }
 </script>
