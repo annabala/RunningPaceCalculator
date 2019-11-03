@@ -2,11 +2,11 @@
 Personal running diary - created with Vue.js and Firebase.
 
 ## Table of contents
-1.[Introduction](#introduction)
-2.[Sprints](#planning-my-app)
-3.[Technologies](#technologies)
-4.[Status](#status)
-5.[Run project](#run-project)
+1. [Introduction](#introduction)
+2. [Sprints](#planning-my-app)
+3. [Technologies](#technologies)
+4. [Status](#status)
+5. [Run project](#run-project)
 
 ### Introduction
 Hello, welcome in my projct. Few words about: 
