@@ -1,4 +1,4 @@
-# Running App
+# Running App (In progress..)
 Personal running diary - created with Vue.js and Firebase.
 
 ## Table of contents
