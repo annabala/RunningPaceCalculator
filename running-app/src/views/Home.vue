@@ -1,17 +1,17 @@
 <template>
   <div class="home">
-    <CalculatePace/>
+    <AppCalculatePace/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import CalculatePace from '@/components/CalculatePace.vue'
+import AppCalculatePace from '@/components/AppCalculatePace.vue'
 
 export default {
   name: 'home',
   components: {
-    CalculatePace
+    AppCalculatePace
   }
 }
 </script>
