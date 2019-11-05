@@ -11,9 +11,9 @@
         <div class="form-group">
             <label for="time">Time</label>
             <div class="row">
-                <div class="col-md-4 my-3"><input type="text" id="hour-input" class="form-control" placeholder="Hour" required><span class="error" aria-live="polite"></span></div>
-                <div class="col-md-4 my-3"><input type="text" id="minutes-input" class="form-control" placeholder="Minutes" required><span class="error" aria-live="polite"></span></div>
-                <div class="col-md-4 my-3"><input type="text" id="seconds-input" class="form-control" placeholder="Seconds" required><span class="error" aria-live="polite"></span></div>
+                <div class="col-md-4 my-3"><input type="text" id="hour-input" class="form-control" placeholder="Hour" required><span class="calculate-pace--error" aria-live="polite">Fill empty fields or fix errors</span></div>
+                <div class="col-md-4 my-3"><input type="text" id="minutes-input" class="form-control" placeholder="Minutes" required><span class="calculate-pace--error" aria-live="polite"></span></div>
+                <div class="col-md-4 my-3"><input type="text" id="seconds-input" class="form-control" placeholder="Seconds" required><span class="calculate-pace--error" aria-live="polite"></span></div>
             </div>
         </div>
         <button type="submit" id="show-result" @click="AppCalculatePace()">Find your pace!</button>
@@ -53,7 +53,7 @@ export default {
         minutes = parseInt(document.getElementById('minutes-input').value);
         seconds = parseInt(document.getElementById('seconds-input').value);
         result = document.querySelector('.result-div');
-            
+
         let hourValue = hour * 60;
         let minutesValue = minutes * 1;
         let secondsValue = seconds / 60;
@@ -69,20 +69,6 @@ export default {
         } else {
                 alert('Fill empty fields to get a result');
         }
-            
-    },
-    addItem: function() {
-        let elVal, stringValues;
-        let listItem = document.querySelector('.score-list-item');
-        let singleItemValues = document.querySelectorAll('.item-value');
-        let valueArray = Array.prototype.slice.call(singleItemValues);
-        let getValues = valueArray.map((el) => {
-            return elVal = el.value;
-        });
-        if(elVal) {
-            stringValues = getValues.join(', ');
-            listItem.innerHTML = stringValues;
-        }
     }
   }
 }
@@ -91,13 +77,20 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .calculate-pace {
+    max-width: 500px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     &--result {
-    padding: 20px;
-    text-align: center;
-  }
+        padding: 20px;
+        text-align: center;
+        font: 600 2rem/3rem 'Quicksand';
+        color: #fff183;
+    }
+    &--error {
+        display: none;
+    }
 }
 
 </style>
