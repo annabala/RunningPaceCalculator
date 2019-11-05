@@ -3,14 +3,14 @@
     <nav id="nav" class="text-center">
       <div class="container">
           <div class="nav-container d-flex justify-content-between align-items-center">
-              <div id="logo" class="d-flex flex-row justify-content-center align-items-center">
-                <img id="logo" alt="Vue logo" src="./assets/trainers.svg">
-                <h1 class="h1 ml-5"><router-link to="/">Run the world!</router-link></h1>
+              <div id="logo-box" class="d-flex flex-row justify-content-center align-items-center">
+                <img id="logo" alt="Running app logo" src="./assets/trainers.svg">
+                <h1 class="h1 ml-4"><router-link to="/">Run the world!</router-link></h1>
               </div>
               <ul id="menu" class="d-flex justify-content-center align-items-center">
               <li><router-link to="/">Home</router-link></li>
                 <li><router-link to="/app-results">Best score</router-link></li>
-                <li><router-link to="/personal-race-gallery">Personal race gallery</router-link></li>
+                <li><router-link to="/app-gallery">Personal race gallery</router-link></li>
                 <li><router-link to="/registration">Register/Login</router-link></li>
               </ul>
           </div>
@@ -34,16 +34,20 @@ body {
     background-repeat: no-repeat;
     object-fit: cover;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     font-family: 'Quicksand', sans-serif;
     font-size: 100%;
+}
+
+a {
+    color: inherit;
 }
 
 #logo {
     width: 80px;
 }
 
-#logo .h1 {
+#logo-box .h1 {
     font: 700 1.1rem/1.6rem 'Montserrat';
 }
 .nav-container {
@@ -72,10 +76,10 @@ body {
     padding: 30px 0;
 }
 
-#vue-app .form {
-    max-width: 500px;
-    margin: 0 auto;
-}
+// #vue-app .form {
+//     max-width: 500px;
+//     margin: 0 auto;
+// }
 
 #vue-app input {
     min-height: 50px;
@@ -96,10 +100,5 @@ body {
     border: none;
     border-radius: 0;
     margin: 10px 10px 10px 0;
-}
-
-#vue-app .result-div {
-    font: 600 2rem/3rem 'Quicksand';
-    color: #fff183;
 }
 </style>
