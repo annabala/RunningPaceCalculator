@@ -5,8 +5,8 @@
         <div class="form-group">
             <label for="distance">Distance</label>
             <input type="text" id="distance-input" v-bind:value="distance" class="form-control" required>
-            <button type="button" @click="add(1)">More</button>
-            <button type="button" @click="substract(1)">Less</button>
+            <button type="button" class="btn green" @click="add(1)">More</button>
+            <button type="button" class="btn green" @click="substract(1)">Less</button>
         </div>
         <div class="form-group">
             <label for="time">Time</label>
@@ -16,7 +16,7 @@
                 <div class="col-md-4 my-3"><input type="text" id="seconds-input" class="form-control" placeholder="Seconds" required><span class="calculate-pace--error" aria-live="polite"></span></div>
             </div>
         </div>
-        <button type="submit" id="show-result" @click="AppCalculatePace()">Find your pace!</button>
+        <button type="submit" id="show-result" class="btn green" @click="AppCalculatePace()">Find your pace!</button>
     </form>
     <div class="calculate-pace--result">
         <h2 class="h2">Your pace:</h2>
@@ -32,9 +32,7 @@ export default {
       return {
         distance: 10,
         distanceUnit: 'kilometers',
-        result: '<span class="result-time" id="result-time"></span>',
-        newItem: "",
-        itemValues: []
+        result: '<span class="result-time" id="result-time"></span>'
       }
   },
   methods : {

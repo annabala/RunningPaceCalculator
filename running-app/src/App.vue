@@ -92,13 +92,15 @@ a {
     font: 500 1.1rem/1.6rem 'Quicksand';
 }
 
-#vue-app button {
-    background-color: #206d3d;
+#vue-app .btn {
     color: #fff;
     padding: .375rem 1rem;
     font: 500 1.1rem/1.6rem 'Quicksand';
     border: none;
     border-radius: 0;
-    margin: 10px 10px 10px 0;
+    // margin: 10px 10px 10px 0;
+}
+.btn.green {
+    background-color: #206d3d;
 }
 </style>
